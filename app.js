@@ -1,0 +1,69 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const views = document.querySelectorAll(".view");
+  const navLinks = document.querySelectorAll(".nav a");
+  const toggle = document.getElementById("mode-toggle");
+
+  // Theme: load saved preference
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") {
+    document.body.classList.add("dark");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", toggle.checked ? "dark" : "light");
+  });
+
+  // View switching
+  function showView(viewName) {
+    views.forEach((vw) => {
+      if (vw.id === "view-" + viewName) {
+        vw.classList.add("active");
+
+        // Project cards delay (if any)
+        const cards = vw.querySelectorAll(".project-card");
+        cards.forEach((card, i) => {
+          card.style.animationDelay = `${i * 0.2}s`;
+        });
+      } else {
+        vw.classList.remove("active");
+      }
+    });
+  }
+
+  // Handle clicks
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const viewName = link.getAttribute("data-view");
+      showView(viewName);
+      window.location.hash = viewName;
+    });
+  });
+
+  // Handle hash on load
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    showView(hash);
+  } else {
+    showView("home");
+  }
+
+  // 🔥 Reveal on scroll
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
+    observer.observe(el);
+  });
+});

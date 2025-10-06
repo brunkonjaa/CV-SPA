@@ -2,28 +2,28 @@
 
 **Live Demo:** [https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/)
 
-An interactive single-page CV built entirely with **HTML**, **CSS**, and **JavaScript**.  
-No frameworks, no libraries, no nonsense - just clean, deliberate structure and a touch of developer stubbornness.
+An interactive single-page CV built entirely with **HTML**, **CSS**, and **JavaScript**
+No frameworks, no libraries, no nonsense - just clean, deliberate structure and a touch of developer stubbornness
 
 ---
 
 **What This Project Is**
 
-This is not a traditional CV; it’s an *interactive web application* that behaves like a minimalist Single Page Application (SPA).  
-Each section (Home, Education, Experience, Skills, Additional, Referees, Summary, Projects) is dynamically displayed using JavaScript view switching - no reloads, no frameworks.
+This is not a traditional CV; it’s an *interactive web application* that behaves like a minimalist Single Page Application (SPA)
+Each section (Home, Education, Experience, Skills, Additional, Referees, Summary, Projects) is dynamically displayed using JavaScript view switching - no reloads, no frameworks
 
-The goal: to showcase not just what I’ve learned, but *how I build*.
+The goal: to showcase not just what I’ve learned, but *how I build*
 
 ---
 
 **Key Features**
 
-- **Dark / Light Mode** - remembers your preference using `localStorage`.  
-  Because comfort shouldn’t end when you open a CV.  
-- **Smooth Section Switching** - seamless transitions handled with URL hashes and simple DOM logic.  
-- **Reveal-on-Scroll Animations** - powered by the native `IntersectionObserver` API for smooth, efficient motion.  
-- **Responsive Design** - fully functional on mobile, tablet, or desktop.  
-- **Project Showcase Grid** - a structured, clickable gallery linking to my live exams, labs, and study materials.
+- **Dark / Light Mode** - remembers your preference using `localStorage`
+  Because comfort shouldn’t end when you open a CV
+- **Smooth Section Switching** - seamless transitions handled with URL hashes and simple DOM logic
+- **Reveal-on-Scroll Animations** - powered by the native `IntersectionObserver` API for smooth, efficient motion
+- **Responsive Design** - fully functional on mobile, tablet, or desktop
+- **Project Showcase Grid** - a structured, clickable gallery linking to my live exams, labs, and study materials
 
 ---
 
@@ -34,7 +34,7 @@ style.css # Custom color palette, transitions, layout, dark mode
 app.js # Navigation, scroll reveal, theme persistence
 
 
-Together, they form a small but complete front-end project - elegant, efficient, and fully self-contained.
+Together, they form a small but complete front-end project - elegant, efficient, and fully self-contained
 
 ---
 
@@ -52,12 +52,12 @@ No build steps, no server - it just works
 
 **Deployment**
 
-Hosted via **GitHub Pages**.  
+Hosted via **GitHub Pages**
 In `Settings → Pages`, the site is set to deploy from:
 - **Branch:** `main`
 - **Folder:** `/ (root)`
 
-Once saved, GitHub automatically builds and publishes to:  
+Once saved, GitHub automatically builds and publishes to:
 [https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/)
 
 ---
@@ -73,16 +73,17 @@ Once saved, GitHub automatically builds and publishes to:
 
 **About the Author**
 
-I’m **Bruno Suric**, currently studying the **Higher Diploma in Science in Computing (Software Development)** at the *National College of Ireland*.  
-I hold a **Level 7 Diploma in Cyber Security (Distinction, 86%)** from *City Colleges Dublin*.  
+I’m **Bruno Suric**, currently studying the **Higher Diploma in Science in Computing (Software Development)** at the *National College of Ireland*
+I hold a **Level 7 Diploma in Cyber Security (Distinction, 86%)** from *City Colleges Dublin*
 
-This CV SPA project reflects both disciplines - software design precision with cybersecurity awareness.  
-Because a good developer knows how things are built, and a good security professional knows how they fail.
+This CV SPA project reflects both disciplines - software design precision with cybersecurity awareness
+Because a good developer knows how things are built, and a good security professional knows how they fail
 
 ---
 
 **Credits**
 
-Created by **Bruno Suric**, 2025.  
-Written entirely by hand in Notepad++.
-Educational use and forks are welcome - just be kind enough not to claim authorship.
+Created by **Bruno Suric**, 2025.
+Written entirely by hand in Notepad++
+Educational use and forks are welcome - just be kind enough not to claim authorship
+Dedicated to all the people who once said "OH, wait the second, that can't be done"

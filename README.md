@@ -1,4 +1,4 @@
-# CV-SPA — Bruno Suric
+# CV-SPA - Bruno Suric
 
 **Live Demo:** [https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/)
 

@@ -84,6 +84,6 @@ Because a good developer knows how things are built, and a good security profess
 **Credits**
 
 Created by **Bruno Suric**, 2025.
-Written entirely by hand in Notepad++
-Educational use and forks are welcome - just be kind enough not to claim authorship
-Dedicated to all the people who once said "OH, wait the second, that can't be done"
+Written entirely by hand in Notepad++.
+Educational use and forks are welcome - just be kind enough not to claim authorship.
+Dedicated to all the people who once said "OH, wait the second, that can't be done".

@@ -199,7 +199,6 @@ ul, ol {
   box-shadow: 0 16px 24px rgba(0, 0, 0, 0.30);
 }
 
-}
 .project-card h3 {
   color: var(--highlight);
 }
@@ -226,3 +225,4 @@ ul, ol {
     flex-direction: column;
   }
 }
+

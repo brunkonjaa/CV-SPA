@@ -1,264 +1,147 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bruno Suric - CV SPA</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="theme-toggle-container">
-    <label class="theme-switch">
-      <input type="checkbox" id="mode-toggle" />
-      <span class="slider"></span> Dark Mode
-    </label>
-  </div>
-
-  <nav class="nav">
-    <a href="#home" data-view="home">Home</a>
-    <a href="#education" data-view="education">Education</a>
-    <a href="#experience" data-view="experience">Experience</a>
-    <a href="#skills" data-view="skills">Skills</a>
-    <a href="#additional" data-view="additional">Additional</a>
-    <a href="#referees" data-view="referees">Referees</a>
-    <a href="#summary" data-view="summary">Summary</a>
-    <a href="#projects" data-view="projects">Projects</a>
-  </nav>
-
-  <main class="view-container">
-    <section id="view-home" class="view active reveal-on-scroll">
-      <h1>Bruno Suric</h1>
-      <p>
-  <a href="mailto:brunkonjaa@gmail.com">brunkonjaa@gmail.com</a> |
-  <a href="https://www.linkedin.com/in/brunosuric" target="_blank">LinkedIn</a> |
-  <a href="https://github.com/brunkonjaa" target="_blank">GitHub</a>
-</p>
-    </section>
-
-    <section id="view-education" class="view reveal-on-scroll">
-      <h2>Education</h2>
-      <h3><a href="https://short-url.org/1fVIp">HDip in Computing (Software Development)</a></h3>
-      <ul>
-        <li>National College of Ireland</li>
-        <li><strong>NFQ Level 8</strong></li>
-        <li>Currently enrolled 2025–2026</li>
-      </ul>
-      <h3><a href="https://t.ly/pDyJs">Diploma in Cyber Security</a></h3>
-      <ul>
-        <li>City Colleges Dublin</li>
-        <li><strong>NFQ Level 7</strong></li>
-        <li>2024–2025</li>
-        <li><strong>Distinction 86%</strong></li>
-        <li><a href="https://short-url.org/1fW3l">Study Material</a></li>
-        <li><a href="https://short-url.org/1bhPr">HTML Mock Exam</a></li>
-      </ul>
-      <h3><a href="https://short-url.org/1fVOp">BA in Economics</a></h3>
-      <ul>
-        <li>University of Zagreb</li>
-        <li>Completed 1st and 2nd year</li>
-        <li>120 ECTS Credits</li>
-      </ul>
-    </section>
-
-    <section id="view-experience" class="view reveal-on-scroll">
-      <h2>Experience</h2>
-      <h3><a href="https://www.correlation-one.com/individuals">Correlation One</a> — Remote Teaching Assistant</h3>
-      <ul>
-        <li>June 2025 — Present</li>
-        <li>Lab support, troubleshooting, concept clarification</li>
-        <li>Learner engagement, discussion and reinforcement</li>
-      </ul>
-      <h3><a href="https://www.facebook.com/bollardsbarkilkenny/">Bollards Bar</a> — General Manager</h3>
-      <ul>
-        <li>2011–2019</li>
-        <li>Payroll, stock, budgeting, performance analytics</li>
-        <li>Introduced digital systems, network protection</li>
-      </ul>
-      <h3><a href="https://www.facebook.com/southwilliam">South William</a> — General Manager</h3>
-      <ul>
-        <li>2005–2010</li>
-        <li>Operations, compliance, staff scheduling</li>
-      </ul>
-      <h3><a href="https://short-url.org/1bhe8">The Globe and Ri-Ra</a> — Manager on Duty</h3>
-      <ul>
-        <li>2001–2005</li>
-        <li>Daily revenue, staff planning, inventory control</li>
-      </ul>
-    </section>
-
-    <section id="view-skills" class="view reveal-on-scroll">
-      <h2>Technical Skills</h2>
-      <ul class="skills-list">
-        <li>Networking: VLANs, ACLs, Packet Tracer, Wireshark</li>
-        <li>Systems: WinXP–Win11, Linux (basic), virtualization, SIEM</li>
-        <li>Security: Firewall config, log analysis, vulnerability scanning</li>
-      </ul>
-    </section>
-
-    <section id="view-additional" class="view reveal-on-scroll">
-      <h2>Additional Info</h2>
-      <ul>
-        <li>25+ years of Hospitality Management Leadership experience</li>
-        <li>Passionate about Cyber Security, Software Development, IT and cooking</li>
-        <li>OS deployment, Android rooting (<a href="https://t.ly/_pa8f">Magisk</a>)</li>
-        <li>Game console jailbreaking, OpenWRT setup</li>
-        <li>English Duolingo score: <a href="https://t.ly/iRG-r">140</a></li>
-      </ul>
-    </section>
-
-    <section id="view-referees" class="view reveal-on-scroll">
-      <h2>Referees</h2>
-      <ol>
-        <li><a href="https://short-url.org/1bg-v">Paul Noone</a> — Dean of IT, City Colleges</li>
-        <li><a href="https://short-url.org/1fV9w">John Sexton</a> — Lecturer</li>
-        <li><a href="https://short-url.org/1fVdh">Martin O’Reilly</a> — IT Manager</li>
-      </ol>
-    </section>
-
-    <section id="view-summary" class="view reveal-on-scroll">
-      <h2>Summary</h2>
-      <div class="flex-columns">
-        <div>
-          <h3>Education</h3>
-          <ul>
-            <li>HDip in Software Dev<br><span class="line-break">(in progress)</span></li>
-            <li>Diploma in Cyber Security</li>
-            <li>CompTIA Certified</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Suric - Home</title>
+    <!-- Bootstrap CDN: Provides responsive grid and components across the multi-page layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Stylesheet: Shared palette + bespoke styling housed in css/ -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <!-- Skip to main content for keyboard navigation accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3">
+      <!-- Bootstrap Component: Collapsible navbar reused across each standalone page -->
+      <div class="container-xl">
+        <a class="navbar-brand fw-semibold" href="./">Bruno Suric</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#primaryNav"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Bootstrap Component: Toggler icon indicates responsive menu state -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-2">
+            <!-- Bootstrap Nav Item: Each link targets a dedicated page to reduce scrolling -->
+			<li class="nav-item"><a class="nav-link px-2" data-page="home" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="pages/education.html">Education</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="pages/experience.html">Experience</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="pages/skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="pages/additional.html">Additional</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="pages/summary.html">Summary</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="pages/projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="pages/awareness.html">Cyber Awareness</a></li>
+            <li class="nav-item">
+              <a class="nav-link px-2" data-page="cover-letter" href="cover_letter/index.html">Cover Letter</a>
+            </li>
           </ul>
-        </div>
-        <div>
-          <h3>Experience</h3>
-          <ul>
-            <li>25+ years in Management</li>
-            <li>TA at Correlation One</li>
-            <li>CyberSec Expert Zone</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Skills</h3>
-          <ul>
-            <li>CyberSec Tools</li>
-            <li>Networking</li>
-            <li>System Hardening</li>
-          </ul>
+          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center">
+            <!-- Bootstrap Utility: Spacing utilities keep the toggle aligned without extra CSS -->
+            <label class="theme-switch">
+              <input type="checkbox" id="mode-toggle" />
+              <span class="slider"></span>
+              <span class="mode-label" id="mode-label">Dark theme</span>
+            </label>
+          </div>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section id="view-projects" class="view reveal-on-scroll">
-  <h2>Project Showcase</h2>
-  <div class="project-grid">
+    <main class="container-xxl page-shell" id="main-content">
+      <!-- Bootstrap Utility: container-xxl provides consistent max width across all pages -->
+      <section class="py-5">
+        <div class="row g-4 align-items-center">
+          <!-- Bootstrap Grid: Side-by-side layout limits scrolling on desktops -->
+          <div class="col-12 col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3 flex-wrap">
+              <img src="images/myphoto.png" alt="Bruno Suric headshot" class="profile-photo img-fluid" />
+              <h1 class="display-5 fw-semibold mb-0">Bruno Suric</h1>
+            </div>
 
-    <div class="project-card reveal-on-scroll">
-      <h3>CyberSecurity Portfolio</h3>
-      <p>Security tools, labs, and configs from study & self-learning.</p>
-      <a href="https://github.com/brunkonjaa/CyberSecurity-Portfolio" target="_blank">GitHub Repo</a>
-    </div>
+            <p class="lead mb-4">
+              Cybersecurity teaching assistant and software development student blending operational leadership with hands-on
+              technical delivery.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <!-- Bootstrap Utility: Flex helpers group contact actions without extra markup -->
+              <a class="btn btn-outline-light btn-contact" href="mailto:brunkonjaa@gmail.com">Email</a>
+              <a class="btn btn-outline-light btn-contact" href="https://www.linkedin.com/in/brunosuric" target="_blank" rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              <a class="btn btn-outline-light btn-contact" href="https://github.com/brunkonjaa" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <article class="card intro-card h-100">
+              <!-- Bootstrap Utility: h-100 keeps card height aligned with adjacent content -->
+              <h2 class="h4 mb-3">Quick Facts</h2>
+              <ul class="list-unstyled mb-0">
+                <li>National College of Ireland - Higher Diploma in Computing (Software Development)</li>
+                <li>City Colleges Dublin - NFQ Level 7 Cyber Security (Distinction 86%)</li>
+                <li>Remote Teaching Assistant - Correlation One Cyber Security Expert Zone</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <div class="project-card reveal-on-scroll">
-      <h3>HDip in Computing Repo</h3>
-      <p>Projects & coursework from National College of Ireland.</p>
-      <a href="https://github.com/brunkonjaa/NCI-HDIP-Computing" target="_blank">View Repo</a>
-    </div>
+      <section class="py-5">
+        <h2 class="mb-4 text-center text-md-start">Summary Highlights</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-start">
+          <!-- Bootstrap Grid: row-cols keeps summary cards side by side on larger screens -->
+          <article class="col card content-card h-100">
+            <h3>Education</h3>
+            <ul>
+              <li>NFQ Level 8 Higher Diploma in Computing (in progress)</li>
+              <li>NFQ Level 7 Cyber Security (Distinction)</li>
+              <li>120 ECTS completed in BA Economics</li>
+            </ul>
+          </article>
+          <article class="col card content-card h-100">
+            <h3>Experience</h3>
+            <ul>
+              <li>30+ learners mentored per cohort as Remote Teaching Assistant</li>
+              <li>Led hospitality operations for multi-site venues</li>
+              <li>Introduced digital systems and network protections</li>
+            </ul>
+          </article>
+          <article class="col card content-card h-100">
+            <h3>Focus Areas</h3>
+            <ul>
+              <li>Network defence and security tooling</li>
+              <li>Teaching, facilitation, and learner success</li>
+              <li>Full-stack project delivery with Bootstrap 5</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
 
-    <div class="project-card reveal-on-scroll">
-      <h3>SecOps: HTML Mock Exam</h3>
-      <p>Secure Online Exam UI – visual upgrade.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20Mock%20Exam%20SS%20better%20visual.html" target="_blank">Live Demo</a>
-    </div>
+    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top">
+      <span class="to-top-text">To the top</span>
+      <span class="to-top-icon" aria-hidden="true">&uarr;</span>
+    </button>
 
-    <div class="project-card reveal-on-scroll">
-      <h3>CISS Questions (MCQ)</h3>
-      <p>Practice-based networking questions layout.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20questions.html" target="_blank">Try it</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>Networking Final Online</h3>
-      <p>Exam interface for final networking assessment.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/Networking%20Online%20Exam.html" target="_blank">Open Exam</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>FORENSICS: Lectures 1</h3>
-      <p>Lecture interface layout with multiple pages.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/FORENSICS%20Lectures%201.html" target="_blank">Launch</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>FORENSICS: Full Series</h3>
-      <p>All lecture materials bundled in responsive UI.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/FORENSICS%20Lectures.html" target="_blank">View All</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>FORENSICS: Theory Exam</h3>
-      <p>Final theory test built as an HTML-based tool.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/Forensics%20Theory%20Exam.html" target="_blank">Go to Exam</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>IT Fundamentals: Online Exam</h3>
-      <p>Exam structure for ITF assessment with MCQ logic.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/ITF/ITF%20Online%20Exam.html" target="_blank">Access Test</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>Security Fundamentals Online</h3>
-      <p>Lightweight test engine for CyberSec foundation.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SecFun/Security%20Online%20Exam.html" target="_blank">Try Now</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM Lectures</h3>
-      <p>Lecture interface for SecOps Management (SOM).</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Lectures.html" target="_blank">Launch Lectures</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM Mock Exam (Enhanced)</h3>
-      <p>Improved design for better usability in exam mode.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Mock%20Exam%20SS%20better%20visual.html" target="_blank">Open Mock</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM Final Open Exam</h3>
-      <p>Final project deployed as browser-based exam.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20Final.html" target="_blank">Take Exam</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM PDFs Q&A Version</h3>
-      <p>Study tool to match questions/answers from PDFs.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20PDFs%20Q&A%20Final.html" target="_blank">Study Tool</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM Open Q&A PDF Merge</h3>
-      <p>Compiled exam from previous Q&A PDFs.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20Q&A%20from%20PDFs%20Q&A.html" target="_blank">See Compilation</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>SOM End of PDF Exams</h3>
-      <p>Final SecOps test aggregated from PDF exports.</p>
-      <a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SecOps%20Exam%20End%20Of%20PDFs.html" target="_blank">Final Version</a>
-    </div>
-
-    <div class="project-card reveal-on-scroll">
-      <h3>Writeups & Docs</h3>
-      <p>CyberSec writeups and challenge solutions.</p>
-      <a href="https://github.com/brunkonjaa/CyberSecurity-Portfolio/tree/main/Writeups" target="_blank">Explore</a>
-    </div>
-
-  </div>
-</section>
-
-  </main>
-
-  <script src="app.js"></script>
-</body>
+    <!-- Bootstrap Bundle: Powers navbar toggler and other interactive components -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
-
-
 

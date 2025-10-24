@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Suric - Projects</title>
+    <!-- Bootstrap CDN: Enables responsive card grid for project catalogue -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Stylesheet: Shared look & feel across all pages -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body data-page="projects">    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3">
+      <!-- Bootstrap Component: Consistent navbar with collapsible behaviour -->
+      <div class="container-xl">
+        <a class="navbar-brand fw-semibold" href="../index.html">Bruno Suric</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#primaryNav"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Bootstrap Component: Hamburger icon for responsive nav -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-2">
+            <!-- Bootstrap Nav Item: Link set mirrors other pages for easy hopping -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="home" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="education.html">Education</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="experience.html">Experience</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="additional.html">Additional</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="summary.html">Summary</a></li>
+            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="projects.html">Projects</a></li>`n            <li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="awareness.html">Cyber Awareness</a></li>
+            <li class="nav-item">
+              <a class="nav-link px-2" data-page="cover-letter" href="../cover_letter/index.html">Cover Letter</a>
+            </li>
+          </ul>
+          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center">
+            <!-- Bootstrap Utility: Aligns theme toggle with nav items -->
+            <label class="theme-switch">
+              <input type="checkbox" id="mode-toggle" />
+              <span class="slider"></span>
+              <span class="mode-label" id="mode-label">Dark theme</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-xxl page-shell" id="main-content">
+      <section class="py-5">
+        <header class="mb-4">
+          <h1 class="display-6">Project Showcase</h1>
+          <p class="text-muted mb-0">
+            Selected deliverables from coursework, self-study, and teaching support—organised to browse quickly.
+          </p>
+        </header>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center align-items-stretch">
+          <!-- Bootstrap Grid: row-cols utilities keep cards side by side on larger screens -->
+          <article class="col card project-card h-100">
+            <h2 class="h4">CyberSecurity Portfolio</h2>
+            <p>Security tools, labs, and configs from study &amp; self-learning.</p>
+            <a href="https://github.com/brunkonjaa/CyberSecurity-Portfolio" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">HDip in Computing Repo</h2>
+            <p>Projects &amp; coursework from National College of Ireland.</p>
+            <a href="https://github.com/brunkonjaa/NCIRL-HDip-Computing" target="_blank" rel="noopener noreferrer">View Repo</a>
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SecOps: HTML Mock Exam</h2>
+            <p>Secure online exam UI with refreshed visuals.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20Mock%20Exam%20SS%20better%20visual.html"
+              target="_blank"
+               rel="noopener noreferrer">Live Demo</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">CISS Questions (MCQ)</h2>
+            <p>Practice-ready networking question explorer.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20Questions%20MCQ.html"
+              target="_blank"
+               rel="noopener noreferrer">Try It</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">Networking Final Online</h2>
+            <p>Exam interface crafted for the final networking assessment.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/Networking%20Online%20Exam.html"
+              target="_blank"
+               rel="noopener noreferrer">Open Exam</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">FORENSICS: Lectures 1</h2>
+            <p>Lecture interface layout with multi-page navigation.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/FORENSICS%20Lectures%201.html"
+              target="_blank"
+               rel="noopener noreferrer">Launch</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">FORENSICS: Full Series</h2>
+            <p>All forensic lecture materials in one responsive UI.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/FORENSICS%20Lectures.html"
+              target="_blank"
+               rel="noopener noreferrer">View All</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">FORENSICS: Theory Exam</h2>
+            <p>Final theory assessment delivered via browser.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Forensics/Forensics%20Theory%20Exam.html"
+              target="_blank"
+               rel="noopener noreferrer">Go to Exam</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">IT Fundamentals: Online Exam</h2>
+            <p>MCQ-driven exam experience for ITF learners.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/ITF/ITF%20Online%20Exam.html"
+              target="_blank"
+               rel="noopener noreferrer">Access Test</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">Security Fundamentals Online</h2>
+            <p>Lightweight testing engine for security fundamentals.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SecFun/Security%20Online%20Exam.html"
+              target="_blank"
+               rel="noopener noreferrer">Try Now</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM Lectures</h2>
+            <p>Lesson browser for SecOps Management content.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Lectures.html"
+              target="_blank"
+               rel="noopener noreferrer">Launch Lectures</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM Mock Exam (Enhanced)</h2>
+            <p>Improved mock exam layout for better usability.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Mock%20Exam%20SS%20better%20visual.html"
+              target="_blank"
+               rel="noopener noreferrer">Open Mock</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM Final Open Exam</h2>
+            <p>Final project deployed as a browser-based exam.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20Final.html"
+              target="_blank"
+               rel="noopener noreferrer">Take Exam</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM PDFs Q&amp;A Version</h2>
+            <p>Study tool pairing SOM questions and answers.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20PDFs%20Q&amp;A%20Final.html"
+              target="_blank"
+               rel="noopener noreferrer">Study Tool</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM Open Q&amp;A PDF Merge</h2>
+            <p>Compiled exam from earlier Q&amp;A PDF releases.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SOM%20Open%20Exam%20Q&amp;A%20from%20PDFs%20Q&amp;A.html"
+              target="_blank"
+               rel="noopener noreferrer">See Compilation</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">SOM End of PDF Exams</h2>
+            <p>Aggregated SecOps exam created from PDF exports.</p>
+            <a
+              href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/SOM/SecOps%20Exam%20End%20Of%20PDFs.html"
+              target="_blank"
+               rel="noopener noreferrer">Final Version</a
+            >
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">CyberSec Expert Zone</h2>
+            <p>Community knowledge base for cyber security topics.</p>
+            <a href="https://github.com/brunkonjaa/CyberSec-Expert-Zone" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          </article>
+          <article class="col card project-card h-100">
+            <h2 class="h4">Writeups &amp; Docs</h2>
+            <p>CyberSec write-ups and challenge solutions.</p>
+            <a href="https://github.com/brunkonjaa/CyberSecurity-Portfolio/tree/main/Writeups" target="_blank" rel="noopener noreferrer">Explore</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top">
+      <span class="to-top-text">To the top</span>
+      <span class="to-top-icon" aria-hidden="true">&uarr;</span>
+    </button>
+
+    <!-- Bootstrap Bundle: Required for navbar toggle + collapse -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
+
+
+
+

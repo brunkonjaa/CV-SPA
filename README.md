@@ -1,89 +1,74 @@
-# CV-SPA - Bruno Suric
+﻿# CV-SPA - Bruno Suric
 
 **Live Demo:** [https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/)
 
-An interactive single-page CV built entirely with **HTML**, **CSS**, and **JavaScript**
-No frameworks, no libraries, no nonsense - just clean, deliberate structure and a touch of developer stubbornness
+A responsive, Bootstrap-powered CV now organised as a multi-page experience. Each section loads in its own directory, reducing scroll fatigue while keeping the custom indigo/red colour palette intact.
 
 ---
 
 **What This Project Is**
 
-This is not a traditional CV; it’s an *interactive web application* that behaves like a minimalist Single Page Application (SPA)
-Each section (Home, Education, Experience, Skills, Additional, Referees, Summary, Projects) is dynamically displayed using JavaScript view switching - no reloads, no frameworks
-
-The goal: to showcase not just what I’ve learned, but *how I build*
+A front-end CV built with **HTML**, **CSS**, **Bootstrap 5**, and a touch of **JavaScript**. Pages include Home, Education, Experience, Skills, Additional, Summary, Projects, and a dedicated Cover Letter inside documents/.
 
 ---
 
 **Key Features**
 
-- **Dark / Light Mode** - remembers your preference using `localStorage`
-  Because comfort shouldn’t end when you open a CV
-- **Smooth Section Switching** - seamless transitions handled with URL hashes and simple DOM logic
-- **Reveal-on-Scroll Animations** - powered by the native `IntersectionObserver` API for smooth, efficient motion
-- **Responsive Design** - fully functional on mobile, tablet, or desktop
-- **Project Showcase Grid** - a structured, clickable gallery linking to my live exams, labs, and study materials
+- **Dark / Light Mode** — persists preference via localStorage.
+- **Modular Navigation** — shared Bootstrap navbar across all pages with active-link highlighting.
+- **Side-by-Side Layouts** — Bootstrap grids keep cards aligned on desktop while stacking gracefully on mobile.
+- **Project Catalogue** — multi-column gallery linking to exams, repos, and study material.
+- **Cover Letter Page** — integrates PDF download and portrait within the same visual system.
 
 ---
 
 **File Structure**
 
-index.html # Page structure: sections for all content views
-style.css # Custom color palette, transitions, layout, dark mode
-app.js # Navigation, scroll reveal, theme persistence
-
-
-Together, they form a small but complete front-end project - elegant, efficient, and fully self-contained
+`
+css/style.css       # Colour palette, textures, and component tweaks
+js/app.js           # Theme toggle, navbar collapse, to-top control
+images/myphoto.png  # Portrait used on the cover letter page
+pages/education.html
+pages/experience.html
+pages/skills.html
+pages/additional.html
+pages/summary.html
+pages/projects.html
+cover_letter/index.html    # Cover letter page with Go Home button
+index.html                 # Home landing page
+`
 
 ---
 
 **Running Locally**
 
-1. Clone the repository:
-git clone https://github.com/brunkonjaa/CV-SPA.git
-
-2. Open the folder
-3. Double-click `index.html` or open it in any browser
-
-No build steps, no server - it just works
+1. git clone https://github.com/brunkonjaa/CV-SPA.git
+2. Open index.html (or any page in pages/ directly).
+3. Enjoy — no build tooling required.
 
 ---
 
 **Deployment**
 
-Hosted via **GitHub Pages**
-In `Settings → Pages`, the site is set to deploy from:
-- **Branch:** `main`
-- **Folder:** `/ (root)`
-
-Once saved, GitHub automatically builds and publishes to:
-[https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/)
+Hosted on **GitHub Pages** (branch main, folder /). The redirect handles the new folder layout while keeping the existing live URL: [https://brunkonjaa.github.io/CV-SPA/](https://brunkonjaa.github.io/CV-SPA/).
 
 ---
 
-**Development Insights**
+**Development Notes**
 
-- CSS variables make theme switching painless and scalable
-- IntersectionObserver provides animation precision without performance cost
-- Static HTML projects can still feel dynamic when structure and motion are balanced
-- Always remove your phone number before deploying anything public
+- Bootstrap utilities tame layout/spacing; bespoke CSS handles theming and textures.
+- JavaScript now focuses on theming, navbar collapse, and optional reveal animations — no SPA view switching.
+- Assets live under dedicated css/, js/, and images/ directories for easier caching and future expansion.
 
 ---
 
 **About the Author**
 
-I’m **Bruno Suric**, currently studying the **Higher Diploma in Science in Computing (Software Development)** at the *National College of Ireland*
-I hold a **Level 7 Diploma in Cyber Security (Distinction, 86%)** from *City Colleges Dublin*
-
-This CV SPA project reflects both disciplines - software design precision with cybersecurity awareness
-Because a good developer knows how things are built, and a good security professional knows how they fail
+I’m **Bruno Suric**, currently pursuing the **Higher Diploma in Science in Computing (Software Development)** at the *National College of Ireland* and holder of a **Level 7 Diploma in Cyber Security (Distinction, 86%)** from *City Colleges Dublin*.
 
 ---
 
 **Credits**
 
-Created by **Bruno Suric**, 2025.
-Written entirely by hand in Notepad++.
-Educational use and forks are welcome - just be kind enough not to claim authorship.
-Dedicated to all the people who once said "OH, wait the second, that can't be done".
+Created by **Bruno Suric**, 2025. Educational use and forks welcome — please retain attribution.
+

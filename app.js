@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showView("home");
   }
 
-  // 🔥 Reveal on scroll
+  // Reveal on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

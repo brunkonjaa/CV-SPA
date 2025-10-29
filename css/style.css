@@ -1,4 +1,15 @@
-﻿:root {
+﻿/* css/style.css | Custom stylesheet for CV-SPA project */
+/* Bootstrap Integration Notes:
+ * - This project uses Bootstrap 5.3.3 from CDN (https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/)
+ * - Bootstrap provides: responsive grid system (container, row, col classes), navbar components, utility classes
+ * - Bootstrap Documentation: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+ * - Custom CSS below extends Bootstrap with theme variables, dark mode, and project-specific styling
+ * - Key Bootstrap components used: navbar (with collapse), grid (row/col), utilities (spacing, flex, display)
+ */
+
+/* === CSS CUSTOM PROPERTIES (VARIABLES) === */
+/* Root variables define the color palette and spacing system used throughout the site */
+:root {
   /* Professional CV Color Scheme - Orange + White + Dark Gray */
   --bg: #353535;
   --bg-secondary: #4a4a4a;
@@ -36,6 +47,8 @@
   --space-3xl: 100px;
 }
 
+/* === DARK MODE THEME OVERRIDES === */
+/* Applied when body has 'dark' class - provides light theme alternative */
 body.dark {
   /* Professional CV Color Scheme - Light Theme (Opposite) */
   --bg: #FFFFFF;
@@ -65,12 +78,16 @@ body.dark {
   --error: #ef4444;
 }
 
+/* === BASE ELEMENT RESET === */
+/* Universal box-sizing and margin/padding reset for consistent layout */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* === BODY STYLING === */
+/* Main body container with theme colors, gradients, and smooth transitions */
 body {
   position: relative;
   min-height: 100vh;
@@ -87,6 +104,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* === PAGE LOADING STATES === */
+/* Smooth fade-in effect when page loads */
 body.page-loading {
   opacity: 0;
 }
@@ -96,6 +115,8 @@ body.page-loaded {
   transition: opacity 0.4s ease;
 }
 
+/* === TEXTURE OVERLAY === */
+/* Subtle gradient texture applied via pseudo-element for visual depth */
 body::before {
   content: "";
   position: fixed;
@@ -107,6 +128,8 @@ body::before {
   z-index: 0;
 }
 
+/* === ANIMATION KEYFRAMES === */
+/* Reusable animations for page elements - fade, slide, scale effects */
 /* SMOOTH PAGE LOAD ANIMATIONS */
 @keyframes fadeInUp {
   from {
@@ -150,7 +173,8 @@ body::before {
   }
 }
 
-/* Reveal on scroll animation */
+/* === SCROLL REVEAL ANIMATION === */
+/* Elements with .reveal-on-scroll class fade in when scrolled into view (triggered by JS) */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -162,6 +186,8 @@ body::before {
   transform: translateY(0);
 }
 
+/* === PAGE LOAD ELEMENT ANIMATIONS === */
+/* Staggered animation delays create a cascading reveal effect on page load */
 /* Page load animations */
 .page-shell {
   animation: fadeIn 0.5s ease;
@@ -213,6 +239,9 @@ header.mb-4 {
   animation: slideInFromLeft 0.7s ease;
 }
 
+/* === NAVIGATION BAR STYLING === */
+/* Custom navbar extending Bootstrap's navbar component with glassmorphism effect */
+/* Bootstrap navbar component enhanced with backdrop-filter and custom styling */
 /* IMPROVED NAVIGATION */
 .nav {
   background: var(--accent);
@@ -228,6 +257,8 @@ header.mb-4 {
   border: 1px solid var(--surface-border);
 }
 
+/* === NAVBAR BRAND (LOGO) === */
+/* Navbar brand styling - Bootstrap .navbar-brand class extended */
 .nav .navbar-brand {
   font-weight: 700;
   font-size: 1.125rem;
@@ -235,6 +266,8 @@ header.mb-4 {
   letter-spacing: -0.01em;
 }
 
+/* === NAVBAR LINKS === */
+/* Bootstrap .nav-link styling with hover effects and active state indicators */
 .nav .nav-link {
   font-weight: 500;
   font-size: 0.875rem;
@@ -247,6 +280,8 @@ header.mb-4 {
   position: relative;
 }
 
+/* === NAVBAR LINK UNDERLINE EFFECT === */
+/* Animated underline that appears on hover and for active links */
 .nav .nav-link::after {
   content: '';
   position: absolute;
@@ -260,6 +295,8 @@ header.mb-4 {
   transition: transform 0.3s ease;
 }
 
+/* === NAVBAR LINK STATES === */
+/* Hover and active states for navigation links */
 .nav .nav-link:hover::after,
 .nav .nav-link.active::after {
   transform: scaleX(1);
@@ -285,6 +322,8 @@ body.dark .nav .nav-link.active {
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
 }
 
+/* === TYPOGRAPHY === */
+/* Heading styles with responsive sizing and custom font families */
 /* IMPROVED TYPOGRAPHY - Professional Hierarchy */
 h1, h2, h3, h4, h5, h6 {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
@@ -295,6 +334,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-md);
 }
 
+/* === DARK MODE HEADING OVERRIDES === */
+/* Headings get highlight color in dark mode for better visibility */
 body.dark h1, 
 body.dark h2, 
 body.dark h3, 
@@ -304,6 +345,8 @@ body.dark h6 {
   color: var(--highlight);
 }
 
+/* === DISPLAY HEADING SIZES === */
+/* Bootstrap display classes with custom sizing */
 .display-5 {
   font-size: 48px !important;
   font-weight: 700;
@@ -336,6 +379,8 @@ h4 {
   margin-bottom: var(--space-sm);
 }
 
+/* === LEAD PARAGRAPH STYLING === */
+/* Bootstrap .lead class for intro paragraphs */
 .lead {
   font-size: 18px;
   font-weight: 400;
@@ -344,6 +389,8 @@ h4 {
   color: var(--text-secondary);
 }
 
+/* === PAGE SHELL CONTAINER === */
+/* Main content wrapper - works with Bootstrap container classes */
 /* IMPROVED CARD DESIGN WITH BETTER SPACING */
 .page-shell {
   padding: var(--space-2xl) var(--space-md) var(--space-2xl);
@@ -353,6 +400,9 @@ h4 {
   margin: 0 auto;
 }
 
+/* === CARD COMPONENT === */
+/* Custom card styling extending Bootstrap's card component */
+/* Cards use flexbox for equal height in Bootstrap grid layouts */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--surface-border);
@@ -368,6 +418,8 @@ h4 {
   min-height: 160px;
 }
 
+/* === CARD TOP BORDER ACCENT === */
+/* Decorative top border on cards for visual hierarchy */
 .card::before {
   content: "";
   position: absolute;
@@ -378,22 +430,30 @@ h4 {
   background: var(--highlight);
 }
 
+/* === CARD HOVER EFFECTS === */
+/* Lift and shadow effects on hover for interactivity */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-shadow-hover);
   border-color: var(--highlight);
 }
 
+/* === DARK MODE CARD HOVER === */
+/* Enhanced shadow in dark mode */
 body.dark .card:hover {
   box-shadow: 0 8px 24px rgba(255, 107, 1, 0.3), 0 4px 12px rgba(255, 107, 1, 0.2);
 }
 
+/* === CARD FOCUS STATE === */
+/* Accessibility: visible focus indicator for keyboard navigation */
 .card:focus-within {
   outline: 2px solid var(--highlight);
   outline-offset: 2px;
   transform: translateY(-5px);
 }
 
+/* === CARD TEXT STYLING === */
+/* Headings and text inside cards */
 .card h2, .card h3, .card h4 {
   color: #FFFFFF;
   margin-bottom: var(--space-sm);
@@ -402,12 +462,14 @@ body.dark .card:hover {
   font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* === CARD TEXT IN DARK MODE === */
 body.dark .card h2,
 body.dark .card h3,
 body.dark .card h4 {
   color: #353535;
 }
 
+/* === CARD PARAGRAPH AND LIST STYLING === */
 .card p, .card li {
   color: var(--text-secondary);
   font-size: 15px;
@@ -425,6 +487,7 @@ body.dark .card h4 {
   padding-left: var(--space-xs);
 }
 
+/* === CARD SUBTITLE === */
 .card-subtitle {
   font-size: 14px;
   color: var(--text-muted);
@@ -432,6 +495,8 @@ body.dark .card h4 {
   font-weight: 500;
 }
 
+/* === PROFILE PHOTO === */
+/* Circular profile image with border and hover effect */
 /* PERFECTLY ROUND PHOTO - NO BLACK ARTIFACTS */
 .profile-photo {
   width: 200px;
@@ -451,6 +516,8 @@ body.dark .card h4 {
   transform: scale(1.1);
 }
 
+/* === PROJECT IMAGES === */
+/* Images within project cards and general cards */
 /* Project Images */
 .project-card img,
 .card img {
@@ -466,6 +533,8 @@ body.dark .card h4 {
   transform: scale(1.1);
 }
 
+/* === BUTTON STYLING === */
+/* Primary contact button with hover and focus states */
 /* IMPROVED BUTTONS - Professional CTA Style */
 .btn-contact {
   background: var(--button-bg);
@@ -500,6 +569,7 @@ body.dark .card h4 {
   outline-offset: 2px;
 }
 
+/* === SECONDARY BUTTON === */
 /* Secondary Button Style */
 .btn-secondary {
   background: transparent;
@@ -523,6 +593,8 @@ body.dark .card h4 {
   box-shadow: 0 4px 8px rgba(34, 211, 238, 0.3);
 }
 
+/* === THEME TOGGLE SWITCH === */
+/* Custom theme toggle switch with smooth transitions */
 /* THEME TOGGLE IMPROVEMENTS */
 .theme-switch {
   position: relative;
@@ -613,10 +685,13 @@ body.dark .theme-switch:hover {
   white-space: nowrap;
 }
 
+/* === THEME LABEL TRANSITION STATE === */
 .mode-label.is-transitioning {
   opacity: 0.5;
 }
 
+/* === BOOTSTRAP GRID SPACING === */
+/* Custom grid spacing overrides for Bootstrap .row and .col classes */
 /* GRID SPACING IMPROVEMENTS - FORCE PROPER GAPS */
 .row.g-4 {
   --bs-gutter-x: 4rem;
@@ -627,7 +702,9 @@ body.dark .theme-switch:hover {
   gap: 4rem 3rem;
 }
 
+/* === BOOTSTRAP ROW-COLS RESPONSIVE === */
 /* Perfect 3-column layout with consistent spacing */
+/* Bootstrap responsive column classes extended */
 .row-cols-1 > * {
   flex: 0 0 auto;
   width: 100%;
@@ -656,13 +733,16 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === BOOTSTRAP HEIGHT UTILITY === */
 /* Ensure cards stretch to equal height */
+/* Bootstrap .h-100 class ensures equal height cards in flex layouts */
 .h-100 {
   height: 100% !important;
   display: flex;
   flex-direction: column;
 }
 
+/* === PROJECT CARD SPECIFIC STYLING === */
 /* Additional spacing fix for project cards */
 .project-card {
   text-align: center;
@@ -719,6 +799,8 @@ body.dark .theme-switch:hover {
   outline-offset: 2px;
 }
 
+/* === SCROLL TO TOP BUTTON === */
+/* Fixed position button that appears when scrolling down */
 /* SCROLL TO TOP BUTTON */
 .to-top {
   position: fixed;
@@ -785,6 +867,8 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === RESPONSIVE BREAKPOINTS === */
+/* Media queries for Bootstrap breakpoints (lg, md, sm, xs) */
 /* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
   .container-xxl {
@@ -792,6 +876,7 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === TABLET BREAKPOINT (992px and below) === */
 @media (max-width: 992px) {
   .page-shell {
     padding: 1.25rem 1.5rem 2.5rem;
@@ -810,6 +895,7 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === MOBILE BREAKPOINT (768px and below) === */
 @media (max-width: 768px) {
   body {
     font-size: 0.875rem;
@@ -863,6 +949,7 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === SMALL MOBILE BREAKPOINT (576px and below) === */
 @media (max-width: 576px) {
   .page-shell {
     padding: 0.75rem 1rem 1.5rem;
@@ -929,12 +1016,16 @@ body.dark .theme-switch:hover {
   }
 }
 
+/* === TEXT UTILITIES === */
+/* Bootstrap text utility classes extended */
 /* TEXT CONTRAST FIXES */
 .text-muted {
   color: var(--text-muted) !important;
   font-size: 0.875rem;
 }
 
+/* === ACCESSIBILITY === */
+/* Skip link and focus improvements for keyboard navigation */
 /* SKIP TO CONTENT LINK - Accessibility */
 .skip-to-content {
   position: fixed;
@@ -958,6 +1049,8 @@ body.dark .theme-switch:hover {
   outline-offset: 2px;
 }
 
+/* === FOCUS VISIBLE === */
+/* Modern focus indicator for all interactive elements */
 /* FOCUS VISIBLE IMPROVEMENTS */
 *:focus-visible {
   outline: 2px solid var(--highlight);
@@ -965,6 +1058,7 @@ body.dark .theme-switch:hover {
   transition: outline 0.15s ease;
 }
 
+/* === LINK STYLING === */
 /* LINK IMPROVEMENTS */
 a {
   color: var(--highlight);
@@ -985,6 +1079,7 @@ a:focus {
   outline-offset: 1px;
 }
 
+/* === LOADING ANIMATION === */
 /* LOADING STATE */
 @keyframes pulse {
   0%, 100% {
@@ -999,11 +1094,13 @@ a:focus {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* === SMOOTH SCROLL === */
 /* SMOOTH SCROLL */
 html {
   scroll-behavior: smooth;
 }
 
+/* === ACCESSIBILITY: REDUCED MOTION === */
 /* Disable smooth scroll for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1020,6 +1117,7 @@ html {
   }
 }
 
+/* === HEADER VISIBILITY === */
 /* HEADLINE VISIBILITY FIX */
 header.mb-4 {
   background: var(--card-bg);
@@ -1040,6 +1138,7 @@ header.mb-4 .text-muted {
   opacity: 0.9;
 }
 
+/* === DARK MODE CARD EFFECTS === */
 /* METALLIC PURPLE EFFECT FOR DARK MODE */
 body.dark .card {
   background: var(--card-bg);
@@ -1075,6 +1174,7 @@ body.dark .nav {
   border: 1px solid var(--surface-border);
 }
 
+/* === PAGE-SPECIFIC LAYOUTS === */
 /* COVER LETTER LAYOUT OPTIMIZATION */
 body[data-page="cover-letter"] .cover-letter-row {
   gap: 2rem !important;
@@ -1121,7 +1221,9 @@ body[data-page="cover-letter"] .profile-photo {
   }
 }
 
+/* === CYBER AWARENESS PAGE === */
 /* CYBER AWARENESS PAGE - FAKE ADS */
+/* Custom styling for intentionally deceptive advertisement examples */
 .fake-ad {
   background: linear-gradient(135deg, #ff0000 0%, #ff6600 100%);
   border: 3px solid #ffff00;

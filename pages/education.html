@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bruno Suric - Education</title>
+<!DOCTYPE html> <!-- HTML5 doctype declaration -->
+<html lang="en"> <!-- Root HTML element with English language attribute -->
+  <head> <!-- Head section contains metadata and resources -->
+    <meta charset="UTF-8" /> <!-- Character encoding: UTF-8 for international characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport meta: responsive design for mobile devices -->
+    <title>Bruno Suric - Education</title> <!-- Page title shown in browser tab -->
+    <!--
+      === BOOTSTRAP INTEGRATION ===
+      Bootstrap 5.3.3 CDN: https://getbootstrap.com/docs/5.3/
+      Provides: Responsive grid system, navbar component, utility classes
+      Source: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/
+      Key classes used: container-xl, row, col, navbar, navbar-expand-lg, nav-link, collapse
+    -->
     <!-- Bootstrap CDN: Supplies responsive grid utilities for academic timeline -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -12,107 +19,110 @@
       crossorigin="anonymous"
     />
     <!-- Custom Stylesheet: Shared palette + typography -->
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body data-page="education">
+    <link rel="stylesheet" href="../css/style.css" /> <!-- Custom CSS: theme variables, dark mode, project-specific styles -->
+  </head> <!-- End of head section -->
+  <body data-page="education"> <!-- Body with data-page attribute for active link highlighting -->
     <!-- Skip to main content for keyboard navigation accessibility -->
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
-    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a> <!-- Accessibility: keyboard navigation skip link -->
+    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3"> <!-- Bootstrap navbar: collapsible navigation bar, sticky positioning -->
       <!-- Bootstrap Component: Reused navbar to ensure identical UX between pages -->
-      <div class="container-xl">
-        <a class="navbar-brand fw-semibold" href="../index.html">Bruno Suric</a>
+      <div class="container-xl"> <!-- Bootstrap container: responsive max-width container -->
+        <a class="navbar-brand fw-semibold" href="../index.html">Bruno Suric</a> <!-- Bootstrap navbar-brand: logo/brand link -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler" <!-- Bootstrap toggler: hamburger menu button for mobile -->
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#primaryNav"
-          aria-controls="primaryNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="collapse" <!-- Bootstrap data attribute: enables collapse behavior -->
+          data-bs-target="#primaryNav" <!-- Bootstrap target: specifies element to collapse -->
+          aria-controls="primaryNav" <!-- Accessibility: identifies controlled element -->
+          aria-expanded="false" <!-- Accessibility: current expanded state -->
+          aria-label="Toggle navigation" <!-- Accessibility: button description for screen readers -->
         >
           <!-- Bootstrap Component: Toggler icon supports mobile navigation -->
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav">
-          <ul class="navbar-nav align-items-lg-center gap-lg-2">
+          <span class="navbar-toggler-icon"></span> <!-- Bootstrap icon: animated hamburger menu icon -->
+        </button> <!-- End toggler button -->
+        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav"> <!-- Bootstrap collapse: collapsible navigation container -->
+          <ul class="navbar-nav align-items-lg-center gap-lg-2"> <!-- Bootstrap nav: list of navigation links -->
             <!-- Bootstrap Nav Item: Sibling links keep the CV modular -->
-            <li class="nav-item"><a class="nav-link px-2" data-page="home" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="experience.html">Experience</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="additional.html">Additional</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="summary.html">Summary</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="projects.html">Projects</a></li>
-			<li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="awareness.html">Cyber Awareness</a></li>
-            <li class="nav-item">
+            <li class="nav-item"><a class="nav-link px-2" data-page="home" href="../index.html">Home</a></li> <!-- Navigation link to Home page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="education.html">Education</a></li> <!-- Navigation link to Education page (current) -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="experience.html">Experience</a></li> <!-- Navigation link to Experience page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="skills.html">Skills</a></li> <!-- Navigation link to Skills page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="additional.html">Additional</a></li> <!-- Navigation link to Additional page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="summary.html">Summary</a></li> <!-- Navigation link to Summary page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="projects.html">Projects</a></li>`n            <li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="awareness.html">Cyber Awareness</a></li> <!-- Navigation link to Cyber Awareness page -->
+            <li class="nav-item"> <!-- Cover Letter navigation link -->
               <a class="nav-link px-2" data-page="cover-letter" href="../cover_letter/index.html">Cover Letter</a>
-            </li>
-          </ul>
-          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center">
+            </li> <!-- End cover letter nav item -->
+          </ul> <!-- End navbar-nav list -->
+          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center"> <!-- Bootstrap flex utilities: layout for theme toggle -->
             <!-- Bootstrap Utility: Standard spacing across nav variants -->
-            <label class="theme-switch">
-              <input type="checkbox" id="mode-toggle" />
-              <span class="slider"></span>
-              <span class="mode-label" id="mode-label">Dark theme</span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </nav>
+            <label class="theme-switch"> <!-- Custom theme toggle switch -->
+              <input type="checkbox" id="mode-toggle" /> <!-- Theme toggle checkbox input -->
+              <span class="slider"></span> <!-- Visual slider element -->
+              <span class="mode-label" id="mode-label">Dark theme</span> <!-- Theme label text -->
+            </label> <!-- End theme switch -->
+          </div> <!-- End theme toggle container -->
+        </div> <!-- End navbar collapse container -->
+      </div> <!-- End container-xl -->
+    </nav> <!-- End navigation bar -->
 
-    <main class="container-xxl page-shell" id="main-content" id="main-content">
-      <section class="py-5">
-        <header class="mb-4">
-          <h1 class="display-6">Academic Background</h1>
-          <p class="text-muted mb-0">
+    <main class="container-xxl page-shell" id="main-content" id="main-content"> <!-- Bootstrap container-xxl: extra-large responsive container, main content area -->
+      <section class="py-5"> <!-- Section with Bootstrap padding utilities (py-5) -->
+        <header class="mb-4"> <!-- Header with Bootstrap margin-bottom utility -->
+          <h1 class="display-6">Academic Background</h1> <!-- Bootstrap display-6: large heading size -->
+          <p class="text-muted mb-0"> <!-- Bootstrap text-muted: lighter text color -->
             Formal study threads together software development, cyber security, and economics.
-          </p>
-        </header>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-start">
+          </p> <!-- Descriptive paragraph -->
+        </header> <!-- End section header -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-start"> <!-- Bootstrap grid: responsive row with columns, gap spacing (g-4) -->
           <!-- Bootstrap Grid: row-cols ensures two-up cards on desktop to minimise page length -->
-          <article class="col card content-card h-100">
-            <h2 class="h4"><a href="https://www.ncirl.ie/Courses/NCI-Course-Details/course/HDCOMPSDEV" target="_blank" rel="noopener noreferrer">HDip in Computing</a></h2>
-            <ul>
-              <li>National College of Ireland</li>
-              <li><strong>NFQ Level 8</strong></li>
-              <li>In progress - 2025 – 2026</li>
-            </ul>
-          </article>
-          <article class="col card content-card h-100">
-            <h2 class="h4"><a href="https://citycollegedublin.ie/course/special-purpose-award-in-cybersecurity/" target="_blank" rel="noopener noreferrer">Diploma in Cyber Security</a></h2>
-            <ul>
-              <li>City Colleges Dublin</li>
-              <li><strong>NFQ Level 7 - Distinction 86%</strong></li>
-              <li>2024 – 2025</li>
-              <li><a href="https://github.com/brunkonjaa/CyberSecurity-Portfolio/tree/main/Writeups" target="_blank" rel="noopener noreferrer">Study Material</a></li>
-              <li><a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20Mock%20Exam%20SS%20better%20visual.html" target="_blank" rel="noopener noreferrer">HTML Mock Exam</a></li>
-            </ul>
-          </article>
-          <article class="col card content-card h-100">
-            <h2 class="h4"><a href="https://www.efzg.unizg.hr/studiji-29719/preddiplomski-sveucilisni-studiji/5268" target="_blank" rel="noopener noreferrer">BA in Economics</a></h2>
-            <ul>
-              <li>University of Zagreb</li>
-              <li><strong>120 ECTS</strong> completed</li>
-              <li>Year 1 &amp; Year 2 finished</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
+          <article class="col card content-card h-100"> <!-- Bootstrap col: column within row, card: custom card styling, h-100: full height -->
+            <h2 class="h4"><a href="https://www.ncirl.ie/Courses/NCI-Course-Details/course/HDCOMPSDEV" target="_blank" rel="noopener noreferrer">HDip in Computing</a></h2> <!-- Card heading with external link to NCI course page -->
+            <ul> <!-- Unordered list -->
+              <li>National College of Ireland</li> <!-- Institution name -->
+              <li><strong>NFQ Level 8</strong></li> <!-- Qualification level -->
+              <li>In progress - 2025 – 2026</li> <!-- Duration -->
+            </ul> <!-- End list -->
+          </article> <!-- End HDip card -->
+          <article class="col card content-card h-100"> <!-- Diploma card -->
+            <h2 class="h4"><a href="https://citycollegedublin.ie/course/special-purpose-award-in-cybersecurity/" target="_blank" rel="noopener noreferrer">Diploma in Cyber Security</a></h2> <!-- Card heading with link to City Colleges course page -->
+            <ul> <!-- Qualification details -->
+              <li>City Colleges Dublin</li> <!-- Institution -->
+              <li><strong>NFQ Level 7 - Distinction 86%</strong></li> <!-- Achievement -->
+              <li>2024 – 2025</li> <!-- Duration -->
+              <li><a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/" target="_blank" rel="noopener noreferrer">Study Material</a></li> <!-- Resource link to GitHub portfolio -->
+              <li><a href="https://brunkonjaa.github.io/CyberSecurity-Portfolio/HTML%20Exams/Networking%20CISS/CISS%20Mock%20Exam%20SS%20better%20visual.html" target="_blank" rel="noopener noreferrer">HTML Mock Exam</a></li> <!-- Direct link to mock exam -->
+            </ul> <!-- End list -->
+          </article> <!-- End Diploma card -->
+          <article class="col card content-card h-100"> <!-- Economics degree card -->
+            <h2 class="h4"><a href="https://www.efzg.unizg.hr/studiji-29719/preddiplomski-sveucilisni-studiji/5268" target="_blank" rel="noopener noreferrer">BA in Economics</a></h2> <!-- Card heading with link to University of Zagreb program -->
+            <ul> <!-- Degree details -->
+              <li>University of Zagreb</li> <!-- Institution -->
+              <li><strong>120 ECTS</strong> completed</li> <!-- Credits earned -->
+              <li>Year 1 &amp; Year 2 finished</li> <!-- Progress -->
+            </ul> <!-- End list -->
+          </article> <!-- End Economics card -->
+        </div> <!-- End Bootstrap row -->
+      </section> <!-- End main section -->
+    </main> <!-- End main content area -->
 
-    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top">
-      <span class="to-top-text">To the top</span>
-      <span class="to-top-icon" aria-hidden="true">&uarr;</span>
-    </button>
+    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top"> <!-- Scroll to top button with accessibility label -->
+      <span class="to-top-text">To the top</span> <!-- Button text -->
+      <span class="to-top-icon" aria-hidden="true">&uarr;</span> <!-- Up arrow icon -->
+    </button> <!-- End scroll to top button -->
 
     <!-- Bootstrap Bundle: Enables navbar collapse across viewports -->
+    <!-- Bootstrap Bundle JS: Required for navbar toggler, collapse, and other interactive components -->
+    <!-- Source: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js -->
+    <!-- Integrity hash ensures file hasn't been tampered with, crossorigin allows cross-domain loading -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JavaScript: theme toggle, scroll effects, navigation handlers -->
     <script src="../js/app.js"></script>
-  </body>
-</html>
+  </body> <!-- End body -->
+</html> <!-- End HTML document -->
 
 

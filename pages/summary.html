@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bruno Suric - Summary</title>
+<!DOCTYPE html> <!-- HTML5 doctype declaration -->
+<html lang="en"> <!-- Root HTML element with English language attribute -->
+  <head> <!-- Head section contains metadata and resources -->
+    <meta charset="UTF-8" /> <!-- Character encoding: UTF-8 for international characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport meta: responsive design for mobile devices -->
+    <title>Bruno Suric - Summary</title> <!-- Page title shown in browser tab -->
+    <!--
+      === BOOTSTRAP INTEGRATION ===
+      Bootstrap 5.3.3 CDN: https://getbootstrap.com/docs/5.3/
+      Provides: Responsive grid system, navbar component, utility classes
+      Source: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/
+      Key classes used: container-xl, row, col, navbar, navbar-expand-lg, nav-link, collapse
+    -->
     <!-- Bootstrap CDN: Provides shared component styling for the multi-page CV -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -12,101 +19,106 @@
       crossorigin="anonymous"
     />
     <!-- Custom Stylesheet: Dark theme and card styling reused across every page -->
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body data-page="summary">    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3">
+    <link rel="stylesheet" href="../css/style.css" /> <!-- Custom CSS: theme variables, dark mode, project-specific styles -->
+  </head> <!-- End of head section -->
+  <body data-page="summary">    <nav class="nav navbar navbar-expand-lg navbar-dark sticky-top py-3"> <!-- Bootstrap navbar: collapsible navigation bar, sticky positioning -->
       <!-- Bootstrap Component: Consistent collapsible navbar for cross-page navigation -->
-      <div class="container-xl">
-        <a class="navbar-brand fw-semibold" href="../index.html">Bruno Suric</a>
+      <div class="container-xl"> <!-- Bootstrap container: responsive max-width container -->
+        <a class="navbar-brand fw-semibold" href="../index.html">Bruno Suric</a> <!-- Bootstrap navbar-brand: logo/brand link -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler" <!-- Bootstrap toggler: hamburger menu button for mobile -->
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#primaryNav"
-          aria-controls="primaryNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="collapse" <!-- Bootstrap data attribute: enables collapse behavior -->
+          data-bs-target="#primaryNav" <!-- Bootstrap target: specifies element to collapse -->
+          aria-controls="primaryNav" <!-- Accessibility: identifies controlled element -->
+          aria-expanded="false" <!-- Accessibility: current expanded state -->
+          aria-label="Toggle navigation" <!-- Accessibility: button description for screen readers -->
         >
           <!-- Bootstrap Component: Hamburger icon signals collapsible menu on mobile -->
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav">
-          <ul class="navbar-nav align-items-lg-center gap-lg-2">
+          <span class="navbar-toggler-icon"></span> <!-- Bootstrap icon: animated hamburger menu icon -->
+        </button> <!-- End toggler button -->
+        <div class="collapse navbar-collapse justify-content-end align-items-lg-center" id="primaryNav"> <!-- Bootstrap collapse: collapsible navigation container -->
+          <ul class="navbar-nav align-items-lg-center gap-lg-2"> <!-- Bootstrap nav: list of navigation links -->
             <!-- Bootstrap Nav Item: Links point to sibling folders for modular editing -->
-            <li class="nav-item"><a class="nav-link px-2" data-page="home" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="experience.html">Experience</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="additional.html">Additional</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="summary.html">Summary</a></li>
-            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="projects.html">Projects</a></li>
-			<li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="awareness.html">Cyber Awareness</a></li>
-            <li class="nav-item">
+            <li class="nav-item"><a class="nav-link px-2" data-page="home" href="../index.html">Home</a></li> <!-- Bootstrap nav-item: individual navigation link -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="education" href="education.html">Education</a></li> <!-- Navigation link to Education page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="experience" href="experience.html">Experience</a></li> <!-- Navigation link to Experience page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="skills" href="skills.html">Skills</a></li> <!-- Navigation link to Skills page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="additional" href="additional.html">Additional</a></li> <!-- Navigation link to Additional page -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="summary" href="summary.html">Summary</a></li> <!-- Navigation link to Summary page (current) -->
+            <li class="nav-item"><a class="nav-link px-2" data-page="projects" href="projects.html">Projects</a></li>`n            <li class="nav-item"><a class="nav-link px-2" data-page="awareness" href="awareness.html">Cyber Awareness</a></li> <!-- Navigation link to Cyber Awareness page -->
+            <li class="nav-item"> <!-- Cover Letter navigation link -->
               <a class="nav-link px-2" data-page="cover-letter" href="../cover_letter/index.html">Cover Letter</a>
-            </li>
-          </ul>
-          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center">
+            </li> <!-- End cover letter nav item -->
+          </ul> <!-- End navbar-nav list -->
+          <div class="theme-toggle-container ms-lg-3 mt-3 mt-lg-0 d-flex align-items-center"> <!-- Bootstrap flex utilities: layout for theme toggle -->
             <!-- Bootstrap Utility: Spacing utilities keep theme switch aligned with nav links -->
-            <label class="theme-switch">
-              <input type="checkbox" id="mode-toggle" />
-              <span class="slider"></span>
-              <span class="mode-label" id="mode-label">Dark theme</span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </nav>
+            <label class="theme-switch"> <!-- Custom theme toggle switch -->
+              <input type="checkbox" id="mode-toggle" /> <!-- Theme toggle checkbox input -->
+              <span class="slider"></span> <!-- Visual slider element -->
+              <span class="mode-label" id="mode-label">Dark theme</span> <!-- Theme label text -->
+            </label> <!-- End theme switch -->
+          </div> <!-- End theme toggle container -->
+        </div> <!-- End navbar collapse container -->
+      </div> <!-- End container-xl -->
+    </nav> <!-- End navigation bar -->
 
-    <main class="container-xxl page-shell" id="main-content">
-      <section class="py-5">
-        <header class="mb-4">
-          <h1 class="display-6">Executive Summary</h1>
-          <p class="text-muted mb-0">
+    <main class="container-xxl page-shell" id="main-content"> <!-- Bootstrap container-xxl: extra-large responsive container, main content area -->
+      <section class="py-5"> <!-- Section with Bootstrap padding utilities (py-5) -->
+        <header class="mb-4"> <!-- Header with Bootstrap margin-bottom utility -->
+          <h1 class="display-6">Executive Summary</h1> <!-- Bootstrap display-6: large heading size -->
+          <p class="text-muted mb-0"> <!-- Bootstrap text-muted: lighter text color -->
             A snapshot of education, experience, and current focus areas presented for quick scanning.
-          </p>
-        </header>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+          </p> <!-- Descriptive paragraph -->
+        </header> <!-- End section header -->
+        <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- Bootstrap grid: responsive row with 3 columns on medium+ screens, gap spacing (g-4) -->
           <!-- Bootstrap Grid: row-cols keeps highlight cards aligned horizontally on wider screens -->
-          <article class="col card content-card h-100">
-            <h2 class="h4">Education Highlights</h2>
-            <ul>
-              <li>Higher Diploma in Computing (Software Development) - National College of Ireland</li>
-              <li>NFQ Level 7 Diploma in Cyber Security (Distinction 86%)</li>
-              <li>120 ECTS completed toward BA Economics</li>
-            </ul>
-          </article>
-          <article class="col card content-card h-100">
-            <h2 class="h4">Experience Highlights</h2>
-            <ul>
-              <li>Remote Teaching Assistant mentoring 30+ learners per cohort</li>
-              <li>25+ years of leadership running high-volume hospitality venues</li>
-              <li>Introduced digital systems and baseline network security policies</li>
-            </ul>
-          </article>
-          <article class="col card content-card h-100">
-            <h2 class="h4">Core Strengths</h2>
-            <ul>
-              <li>Curriculum support and learner success enablement</li>
-              <li>Network defence, security tooling, and incident response practices</li>
-              <li>Documentation, knowledge sharing, and process optimisation</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
+          <article class="col card content-card h-100"> <!-- Bootstrap col: column within row, card: custom card styling, h-100: full height -->
+            <h2 class="h4">Education Highlights</h2> <!-- Card heading -->
+            <ul> <!-- Unordered list -->
+              <li>Higher Diploma in Computing (Software Development) - National College of Ireland</li> <!-- List item: qualification -->
+              <li>NFQ Level 7 Diploma in Cyber Security (Distinction 86%)</li> <!-- List item: diploma -->
+              <li>120 ECTS completed toward BA Economics</li> <!-- List item: ECTS credits -->
+            </ul> <!-- End list -->
+          </article> <!-- End Education card -->
+          <article class="col card content-card h-100"> <!-- Experience highlights card -->
+            <h2 class="h4">Experience Highlights</h2> <!-- Card heading -->
+            <ul> <!-- Experience list -->
+              <li>Remote Teaching Assistant mentoring 30+ learners per cohort</li> <!-- Teaching experience -->
+              <li>25+ years of leadership running high-volume hospitality venues</li> <!-- Leadership experience -->
+              <li>Introduced digital systems and baseline network security policies</li> <!-- Technical implementation -->
+            </ul> <!-- End list -->
+          </article> <!-- End Experience card -->
+          <article class="col card content-card h-100"> <!-- Core strengths card -->
+            <h2 class="h4">Core Strengths</h2> <!-- Card heading -->
+            <ul> <!-- Strengths list -->
+              <li>Curriculum support and learner success enablement</li> <!-- Strength: teaching -->
+              <li>Network defence, security tooling, and incident response practices</li> <!-- Strength: security -->
+              <li>Documentation, knowledge sharing, and process optimisation</li> <!-- Strength: documentation -->
+            </ul> <!-- End list -->
+          </article> <!-- End Core Strengths card -->
+        </div> <!-- End Bootstrap row -->
+      </section> <!-- End main section -->
+    </main> <!-- End main content area -->
 
-    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top">
-      <span class="to-top-text">To the top</span>
-      <span class="to-top-icon" aria-hidden="true">&uarr;</span>
-    </button>
+    <button type="button" class="to-top" id="to-top" aria-label="Scroll back to the top"> <!-- Scroll to top button with accessibility label -->
+      <span class="to-top-text">To the top</span> <!-- Button text -->
+      <span class="to-top-icon" aria-hidden="true">&uarr;</span> <!-- Up arrow icon -->
+    </button> <!-- End scroll to top button -->
 
     <!-- Bootstrap Bundle: Enables navbar collapse and other interactive features -->
+    <!-- Bootstrap Bundle JS: Required for navbar toggler, collapse, and other interactive components -->
+    <!-- Source: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js -->
+    <!-- Bootstrap Bundle JS: Required for navbar toggler, collapse, and other interactive components -->
+    <!-- Source: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js -->
+    <!-- Integrity hash ensures file hasn't been tampered with, crossorigin allows cross-domain loading -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JavaScript: theme toggle, scroll effects, navigation handlers -->
     <script src="../js/app.js"></script>
-  </body>
-</html>
+  </body> <!-- End body -->
+</html> <!-- End HTML document -->
 

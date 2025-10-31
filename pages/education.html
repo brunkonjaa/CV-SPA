@@ -67,7 +67,9 @@
       </div> <!-- End container-xl -->
     </nav> <!-- End navigation bar -->
 
-    <main class="container-xxl page-shell" id="main-content" id="main-content"> <!-- Bootstrap container-xxl: extra-large responsive container, main content area -->
+    <!-- FIXED: Removed duplicate id="main-content" that was on this tag twice -->
+    <!-- WHY: HTML IDs must be unique on the page, having two breaks skip links and accessibility tools -->
+    <main class="container-xxl page-shell" id="main-content"> <!-- Bootstrap container-xxl: extra-large responsive container, main content area -->
       <section class="py-5"> <!-- Section with Bootstrap padding utilities (py-5) -->
         <header class="mb-4"> <!-- Header with Bootstrap margin-bottom utility -->
           <h1 class="display-6">Academic Background</h1> <!-- Bootstrap display-6: large heading size -->
